@@ -21,9 +21,8 @@
 
         <activity
             android:name=".ui.LoginActivity"
-            android:label="@string/screen_title_login"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar.TransparentStatus">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
