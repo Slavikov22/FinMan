@@ -4,8 +4,9 @@ import android.os.Bundle
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.finman.R
 import com.finman.presenter.LoginPresenter
+import com.finman.view.LoginView
 
-class LoginActivity : BaseActivityView() {
+class LoginActivity : BaseActivityView(), LoginView {
 
     @InjectPresenter
     lateinit var presenter: LoginPresenter
