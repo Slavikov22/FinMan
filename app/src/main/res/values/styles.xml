@@ -1,23 +1,46 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryLight">@color/colorPrimaryLight</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorBackground">@color/colorBackground</item>
-
-        <item name="colorTextOnPrimary">@color/colorTextOnPrimary</item>
-        <item name="colorTextOnAccent">@color/colorTextOnAccent</item>
-
-        <item name="android:textColor">#000000</item>
-        <item name="android:buttonStyle">@style/Button</item>
+    <style name="Button" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:gravity">center</item>
     </style>
 
-    <style name="Button">
-        <item name="android:layout_width">@dimen/default_button_width</item>
-        <item name="android:layout_height">@dimen/default_button_height</item>
-        <item name="android:background">@drawable/bg_button</item>
+    <style name="Login_Field">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_login_field</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="android:layout_marginStart">@dimen/main_padding</item>
+        <item name="android:layout_marginEnd">@dimen/main_padding</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="Login_Field_Image">
+        <item name="android:layout_width">@dimen/login_field_height</item>
+        <item name="android:layout_height">@dimen/login_field_height</item>
+        <item name="android:background">@drawable/bg_login_field_image</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="Login_Field_EditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/login_field_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingStart">@dimen/small_padding</item>
+        <item name="android:paddingEnd">@dimen/small_padding</item>
+    </style>
+
+    <style name="Login_Social">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:padding">@dimen/small_padding</item>
+        <item name="android:layout_marginStart">@dimen/small_padding</item>
+        <item name="android:layout_marginEnd">@dimen/small_padding</item>
     </style>
 
 </resources>

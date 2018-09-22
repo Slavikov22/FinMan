@@ -77,6 +77,8 @@ dependencies {
     implementation deps.realm.adapters
 
     implementation deps.anko.commons
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 }
 kapt {
     generateStubs = true

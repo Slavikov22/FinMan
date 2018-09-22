@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivTopBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_login_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/etLogin"
+        style="@style/Login_Field"
+        android:layout_marginBottom="@dimen/big_padding"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            style="@style/Login_Field_Image"
+            android:src="@drawable/ic_person_black_24dp" />
+
+        <EditText
+            style="@style/Login_Field_EditText"
+            android:hint="@string/hint_login"
+            android:inputType="textEmailAddress" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/etPassword"
+        style="@style/Login_Field"
+        android:layout_marginBottom="@dimen/small_padding"
+        app:layout_constraintBottom_toTopOf="@id/tvForgotPassword">
+
+        <ImageView
+            style="@style/Login_Field_Image"
+            android:src="@drawable/ic_lock_black_24dp" />
+
+        <EditText
+            style="@style/Login_Field_EditText"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_forgot_password"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/big_padding"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/etPassword"
+        app:layout_constraintBottom_toTopOf="@id/socialLayout"/>
+
+    <LinearLayout
+        android:id="@+id/socialLayout"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnLogin"
+        android:layout_marginBottom="@dimen/big_padding"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/Login_Social"
+            android:src="@drawable/ic_google"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            style="@style/Login_Social"
+            android:src="@drawable/ic_facebook"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/Login_Social"
+            android:src="@drawable/ic_vk"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/biggest_padding"
+        android:layout_marginEnd="@dimen/main_padding"
+        android:layout_marginStart="@dimen/main_padding"
+        android:text="@string/btn_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
