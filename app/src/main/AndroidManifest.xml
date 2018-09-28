@@ -21,6 +21,7 @@
 
         <activity
             android:name=".ui.LoginActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.TransparentStatus">
             <intent-filter>
@@ -31,8 +32,9 @@
 
         <activity
             android:name=".ui.SignUpActivity"
-            android:label="@string/screen_title_sign_up"
-            android:screenOrientation="portrait" />
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TransparentStatus" />
 
     </application>
 

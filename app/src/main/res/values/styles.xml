@@ -7,7 +7,11 @@
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="Login_Field">
+    <style name="TextInputLayout_HintTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">?textColorThird</item>
+    </style>
+
+    <style name="Auth_Field_Layout">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/bg_login_field</item>
@@ -18,23 +22,39 @@
         <item name="android:elevation">4dp</item>
     </style>
 
-    <style name="Login_Field_Image">
+    <style name="Auth_Field_Image">
         <item name="android:layout_width">@dimen/login_field_height</item>
         <item name="android:layout_height">@dimen/login_field_height</item>
         <item name="android:background">@drawable/bg_login_field_image</item>
         <item name="android:scaleType">center</item>
     </style>
 
-    <style name="Login_Field_EditText">
+    <style name="Auth_TextInputLayout">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">@dimen/login_field_height</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="Auth_EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@null</item>
         <item name="android:paddingStart">@dimen/small_padding</item>
         <item name="android:paddingEnd">@dimen/small_padding</item>
     </style>
 
-    <style name="Login_Social">
+    <style name="Auth_TextInputLayout.Password">
+        <item name="passwordToggleEnabled">true</item>
+        <item name="passwordToggleTint">?colorPrimaryDark</item>
+    </style>
+
+    <style name="Auth_EditText.Password">
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="Auth_Social">
         <item name="android:layout_width">64dp</item>
         <item name="android:layout_height">64dp</item>
         <item name="android:elevation">4dp</item>

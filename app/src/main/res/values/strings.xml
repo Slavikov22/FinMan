@@ -9,4 +9,12 @@
     <string name="btn_login">Login</string>
     <string name="label_forgot_password">Forgot password?</string>
     <string name="screen_title_sign_up">Sign up</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_repeat_password">Repeat password</string>
+    <string name="label_sign_up">Sign up</string>
+    <string name="label_have_account">Already have an account?</string>
+    <string name="label_not_have_account">Don\'t have account?</string>
+    <string name="btn_sign_up">Sign up</string>
+    <string name="label_sign_in">Sign in</string>
+    <string name="hint_currency">Currency</string>
 </resources>

@@ -6,4 +6,7 @@ import com.finman.view.SignUpView
 @InjectViewState
 class SignUpPresenter : BasePresenter<SignUpView>() {
 
+    fun onSignInClick() {
+        viewState.openSignInScreen()
+    }
 }

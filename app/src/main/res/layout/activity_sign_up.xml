@@ -1,6 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <include layout="@layout/auth_bg" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+
+        <LinearLayout
+            android:id="@+id/layoutLogin"
+            style="@style/Auth_Field_Layout"
+            android:layout_marginBottom="@dimen/big_padding"
+            app:layout_constraintBottom_toTopOf="@id/layoutEmail">
+
+            <ImageView
+                style="@style/Auth_Field_Image"
+                android:src="@drawable/ic_person_black_24dp" />
+
+            <android.support.design.widget.TextInputLayout style="@style/Auth_TextInputLayout">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etLogin"
+                    style="@style/Auth_EditText"
+                    android:hint="@string/hint_login"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutEmail"
+            style="@style/Auth_Field_Layout"
+            android:layout_marginBottom="@dimen/big_padding"
+            app:layout_constraintBottom_toTopOf="@id/layoutPassword">
+
+            <ImageView
+                style="@style/Auth_Field_Image"
+                android:src="@drawable/ic_email_black_24dp" />
+
+            <android.support.design.widget.TextInputLayout style="@style/Auth_TextInputLayout">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etEmail"
+                    style="@style/Auth_EditText"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPassword"
+            style="@style/Auth_Field_Layout"
+            android:layout_marginBottom="@dimen/big_padding"
+            app:layout_constraintBottom_toTopOf="@id/layoutRepeatPassword">
+
+            <ImageView
+                style="@style/Auth_Field_Image"
+                android:src="@drawable/ic_lock_black_24dp" />
+
+            <android.support.design.widget.TextInputLayout style="@style/Auth_TextInputLayout.Password">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etPassword"
+                    style="@style/Auth_EditText.Password"
+                    android:hint="@string/hint_password" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutRepeatPassword"
+            style="@style/Auth_Field_Layout"
+            android:layout_marginBottom="@dimen/big_padding"
+            app:layout_constraintBottom_toTopOf="@id/layoutCurrency">
+
+            <ImageView
+                style="@style/Auth_Field_Image"
+                android:src="@drawable/ic_lock_black_24dp" />
+
+            <android.support.design.widget.TextInputLayout style="@style/Auth_TextInputLayout.Password">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etRepeatPassword"
+                    style="@style/Auth_EditText.Password"
+                    android:hint="@string/hint_repeat_password" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCurrency"
+            style="@style/Auth_Field_Layout"
+            android:layout_marginBottom="@dimen/biggest_padding"
+            app:layout_constraintBottom_toTopOf="@id/btnSignUp">
+
+            <ImageView
+                style="@style/Auth_Field_Image"
+                android:src="@drawable/ic_dollar_black_24dp" />
+
+            <android.support.design.widget.TextInputLayout style="@style/Auth_TextInputLayout">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etCurrency"
+                    style="@style/Auth_EditText"
+                    android:hint="@string/hint_currency"
+                    android:inputType="none" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/main_padding"
+            android:layout_marginEnd="@dimen/main_padding"
+            android:layout_marginBottom="@dimen/big_padding"
+            android:text="@string/btn_sign_up"
+            app:layout_constraintBottom_toTopOf="@id/tvHaveAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/big_padding"
+            android:text="@string/label_have_account"
+            android:textColor="?colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvSignIn"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/small_padding"
+            android:text="@string/label_sign_in"
+            android:textColor="?colorAccent"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvHaveAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvHaveAccount" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
