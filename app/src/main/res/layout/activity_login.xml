@@ -1,109 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/ivTopBackground"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/auth_bg" />
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/bg_login_gradient"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.6"
-        app:layout_constraintStart_toStartOf="parent" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
 
-    <LinearLayout
-        android:id="@+id/etLogin"
-        style="@style/Login_Field"
-        android:layout_marginBottom="@dimen/big_padding"
-        app:layout_constraintBottom_toTopOf="@id/etPassword"
-        app:layout_constraintVertical_chainStyle="packed">
+        <LinearLayout
+            android:id="@+id/layoutLogin"
+            style="@style/Auth_Field_Layout"
+            android:layout_marginBottom="@dimen/big_padding"
+            app:layout_constraintBottom_toTopOf="@id/layoutPassword">
 
-        <ImageView
-            style="@style/Login_Field_Image"
-            android:src="@drawable/ic_person_black_24dp" />
+            <ImageView
+                style="@style/Auth_Field_Image"
+                android:src="@drawable/ic_person_black_24dp" />
 
-        <EditText
-            style="@style/Login_Field_EditText"
-            android:hint="@string/hint_login"
-            android:inputType="textEmailAddress" />
+            <android.support.design.widget.TextInputLayout style="@style/Auth_TextInputLayout">
 
-    </LinearLayout>
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etLogin"
+                    style="@style/Auth_EditText"
+                    android:hint="@string/hint_login"
+                    android:inputType="text" />
 
-    <LinearLayout
-        android:id="@+id/etPassword"
-        style="@style/Login_Field"
-        android:layout_marginBottom="@dimen/small_padding"
-        app:layout_constraintBottom_toTopOf="@id/tvForgotPassword">
+            </android.support.design.widget.TextInputLayout>
 
-        <ImageView
-            style="@style/Login_Field_Image"
-            android:src="@drawable/ic_lock_black_24dp" />
+        </LinearLayout>
 
-        <EditText
-            style="@style/Login_Field_EditText"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword" />
+        <LinearLayout
+            android:id="@+id/layoutPassword"
+            style="@style/Auth_Field_Layout"
+            android:layout_marginBottom="@dimen/small_padding"
+            app:layout_constraintBottom_toTopOf="@id/tvForgotPassword">
 
-    </LinearLayout>
+            <ImageView
+                style="@style/Auth_Field_Image"
+                android:src="@drawable/ic_lock_black_24dp" />
 
-    <TextView
-        android:id="@+id/tvForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_forgot_password"
-        android:textColor="@color/white"
-        android:layout_marginBottom="@dimen/big_padding"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/etPassword"
-        app:layout_constraintBottom_toTopOf="@id/socialLayout"/>
+            <android.support.design.widget.TextInputLayout style="@style/Auth_TextInputLayout.Password">
 
-    <LinearLayout
-        android:id="@+id/socialLayout"
-        android:layout_width="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btnLogin"
-        android:layout_marginBottom="@dimen/big_padding"
-        android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etPassword"
+                    style="@style/Auth_EditText.Password"
+                    android:hint="@string/hint_password" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            style="@style/Login_Social"
-            android:src="@drawable/ic_google"/>
+            </android.support.design.widget.TextInputLayout>
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        </LinearLayout>
 
-            style="@style/Login_Social"
-            android:src="@drawable/ic_facebook"/>
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/big_padding"
+            android:background="?selectableItemBackground"
+            android:text="@string/label_forgot_password"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/socialLayout"
+            app:layout_constraintStart_toStartOf="@id/layoutPassword" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            style="@style/Login_Social"
-            android:src="@drawable/ic_vk"/>
+        <LinearLayout
+            android:id="@+id/socialLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/big_padding"
+            app:layout_constraintBottom_toTopOf="@id/btnLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-    </LinearLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                style="@style/Auth_Social"
+                android:src="@drawable/ic_google" />
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/button_height"
-        android:layout_marginBottom="@dimen/biggest_padding"
-        android:layout_marginEnd="@dimen/main_padding"
-        android:layout_marginStart="@dimen/main_padding"
-        android:text="@string/btn_login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                style="@style/Auth_Social"
+                android:src="@drawable/ic_facebook" />
 
-</android.support.constraint.ConstraintLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                style="@style/Auth_Social"
+                android:src="@drawable/ic_vk" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/main_padding"
+            android:layout_marginEnd="@dimen/main_padding"
+            android:layout_marginBottom="@dimen/big_padding"
+            android:text="@string/btn_login"
+            app:layout_constraintBottom_toTopOf="@id/tvHaveAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/big_padding"
+            android:text="@string/label_not_have_account"
+            android:textColor="?colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvSignUp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/small_padding"
+            android:text="@string/label_sign_up"
+            android:textColor="?colorAccent"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvHaveAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvHaveAccount" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

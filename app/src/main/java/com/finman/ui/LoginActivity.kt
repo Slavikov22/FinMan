@@ -2,6 +2,7 @@ package com.finman.ui
 
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.arellomobile.mvp.presenter.InjectPresenter
@@ -9,6 +10,7 @@ import com.finman.R
 import com.finman.presenter.LoginPresenter
 import com.finman.view.LoginView
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.auth_bg.*
 
 class LoginActivity : BaseActivityView(), LoginView {
 
@@ -26,11 +28,17 @@ class LoginActivity : BaseActivityView(), LoginView {
 
     override fun setupView(savedInstanceState: Bundle?) {
         initBackgroundAnimation()
+        tvSignUp.setOnClickListener { presenter.onSignUpClick() }
     }
 
     override fun onDestroy() {
         backgroundAnimator.cancel()
         super.onDestroy()
+    }
+
+    override fun openSignUpScreen() {
+        val intent = Intent(this, SignUpActivity::class.java)
+        startActivity(intent)
     }
 
     private fun initBackgroundAnimation() {
