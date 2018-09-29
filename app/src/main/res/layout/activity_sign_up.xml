@@ -122,6 +122,7 @@
         <Button
             android:id="@+id/btnSignUp"
             android:layout_width="0dp"
+            android:clickable="true"
             android:layout_height="@dimen/button_height"
             android:layout_marginStart="@dimen/main_padding"
             android:layout_marginEnd="@dimen/main_padding"
