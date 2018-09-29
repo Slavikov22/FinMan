@@ -29,6 +29,9 @@ class LoginActivity : BaseActivityView(), LoginView {
     override fun setupView(savedInstanceState: Bundle?) {
         initBackgroundAnimation()
         tvSignUp.setOnClickListener { presenter.onSignUpClick() }
+        btnLogin.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
     }
 
     override fun onDestroy() {
