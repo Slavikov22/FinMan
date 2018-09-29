@@ -6,8 +6,4 @@
 
     <attr name="colorOnPrimary" format="reference|color" />
     <attr name="colorOnAccent" format="reference|color" />
-
-    <attr name="textColorPrimary" format="reference|color" />
-    <attr name="textColorSecondary" format="reference|color" />
-    <attr name="textColorThird" format="reference|color" />
 </resources>

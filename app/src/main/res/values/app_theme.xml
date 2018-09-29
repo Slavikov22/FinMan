@@ -14,11 +14,10 @@
         <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="colorOnAccent">@color/colorOnAccent</item>
 
-        <item name="textColorPrimary">@color/colorTextPrimary</item>
-        <item name="textColorSecondary">@color/colorTextSecondary</item>
-        <item name="textColorThird">@color/colorTextThird</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="android:textColorTertiary">@color/colorTextThird</item>
 
-        <item name="android:textColor">?textColorPrimary</item>
         <item name="android:buttonStyle">@style/Button</item>
         <item name="buttonStyle">@style/Button</item>
     </style>
