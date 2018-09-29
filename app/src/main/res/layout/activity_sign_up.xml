@@ -108,15 +108,15 @@
                 style="@style/Auth_Field_Image"
                 android:src="@drawable/ic_dollar_black_24dp" />
 
-            <android.support.design.widget.TextInputLayout style="@style/Auth_TextInputLayout">
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/etCurrency"
-                    style="@style/Auth_EditText"
-                    android:hint="@string/hint_currency"
-                    android:inputType="none" />
-
-            </android.support.design.widget.TextInputLayout>
+            <Spinner
+                android:id="@+id/spinnerCurrency"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="?colorPrimaryDark"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/small_padding"
+                android:paddingEnd="@dimen/small_padding" />
 
         </LinearLayout>
 

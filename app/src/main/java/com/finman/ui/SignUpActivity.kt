@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.finman.R
+import com.finman.adapter.CurrencyAdapter
 import com.finman.presenter.SignUpPresenter
 import com.finman.view.SignUpView
 import kotlinx.android.synthetic.main.activity_sign_up.*
@@ -28,6 +29,7 @@ class SignUpActivity : BaseActivityView(), SignUpView {
 
     override fun setupView(savedInstanceState: Bundle?) {
         initBackgroundAnimation()
+        spinnerCurrency.adapter = CurrencyAdapter(this)
         tvSignIn.setOnClickListener { presenter.onSignInClick() }
     }
 
