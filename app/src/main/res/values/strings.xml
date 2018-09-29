@@ -17,4 +17,8 @@
     <string name="btn_sign_up">Sign up</string>
     <string name="label_sign_in">Sign in</string>
     <string name="hint_currency">Currency</string>
+    <string name="item_menu_finances">Finances</string>
+    <string name="item_menu_credits">Credits</string>
+    <string name="item_menu_charts">Charts</string>
+    <string name="item_menu_profile">Profile</string>
 </resources>
