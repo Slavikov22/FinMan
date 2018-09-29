@@ -60,6 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/big_padding"
             android:background="?selectableItemBackground"
+            android:clickable="true"
             android:text="@string/label_forgot_password"
             android:textColor="@color/white"
             android:textSize="16sp"
