@@ -11,7 +11,6 @@
         android:layout_height="match_parent"
         android:background="@android:color/transparent">
 
-
         <LinearLayout
             android:id="@+id/layoutLogin"
             style="@style/Auth_Field_Layout"
@@ -128,33 +127,9 @@
             android:layout_marginEnd="@dimen/main_padding"
             android:layout_marginBottom="@dimen/big_padding"
             android:text="@string/btn_sign_up"
-            app:layout_constraintBottom_toTopOf="@id/tvHaveAccount"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/tvHaveAccount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/big_padding"
-            android:text="@string/label_have_account"
-            android:textColor="?colorOnPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/tvSignIn"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/tvSignIn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?selectableItemBackgroundBorderless"
-            android:padding="@dimen/small_padding"
-            android:text="@string/label_sign_in"
-            android:textColor="?colorAccent"
-            app:layout_constraintBaseline_toBaselineOf="@id/tvHaveAccount"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tvHaveAccount" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 
