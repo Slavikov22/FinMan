@@ -26,6 +26,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        disable 'ContentDescription'
+        disable 'GoogleAppIndexingWarning'
+    }
 }
 
 dependencies {
@@ -74,6 +78,8 @@ dependencies {
     implementation deps.realm.adapters
 
     implementation deps.anko.commons
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 }
 kapt {
     generateStubs = true
